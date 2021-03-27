@@ -1,0 +1,41 @@
+/* CSS Browser Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Set Sitewide Font */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  transition: background 0.3s linear;
+}
+/* Navigation Styles */
+.navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 30vw;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+}
+.nav-links {
+  flex-direction: column;
+  display: flex;
+  list-style-type: none;
+}
+.nav-link a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: inherit;
+  padding: 10px;
+}
+.nav-button {
+  display: none;
+}

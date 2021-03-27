@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jason's Pokedex</title>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./styles/navigation.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <!-- Imported scripts -->
+    <script
+      src="https://kit.fontawesome.com/8aee17fde0.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <h1 class="logo">Pokedex</h1>
+    <ul class="nav-links" id="nav-links">
+      <li class="nav-link" data-menuanchor="landing">
+        <a href="#landing">Home</a>
+      </li>
+      <li class="nav-link" data-menuanchor="pokemon">
+        <a href="#pokemon">Pokemon</a>
+      </li>
+      <li class="nav-link" data-menuanchor="work">
+        <a href="#work">Work</a>
+      </li>
+      <li class="nav-link" data-menuanchor="skills">
+        <a href="#skills">Skills</a>
+      </li>
+      <li class="nav-link" data-menuanchor="projects">
+        <a href="#projects">Projects</a>
+      </li>
+      <li class="nav-link" data-menuanchor="contact">
+        <a href="#contact">Contact</a>
+      </li>
+    </ul>
+    <button class="nav-button"><i class="fas fa-bars"></i></button>
+    <h6>Made by Jason Wandrag</h6>
+  </nav>
+  <!-- Main Content -->
+  <div id="fullpage">
+    <div class="section" data-anchor="landing">
+      <section class="content">
+        Welcome to my Pokedex. Please feel free to search for the pokemon of
+        choice
+      </section>
+    </div>
+    <div class="section" data-anchor="pokemon">
+      <section class="content">
+        <div id="pokemon-details">
+          <img
+            class="pokemon-details-image"
+            src="./images/pokeball.png"
+            alt="Pokeball"
+          />
+          <div class="pokemon-details-container">
+            <h2>Pokedex</h2>
+            <h4>Search for pokemon below</h4>
+          </div>
+        </div>
+        <div id="pokemon-list"></div>
+      </section>
+    </div>
+    <div class="section" data-anchor="work">
+      <section class="content">Work</section>
+    </div>
+    <div class="section" data-anchor="skills">
+      <section class="content">Skills</section>
+    </div>
+    <div class="section" data-anchor="projects">
+      <section class="content">Projects</section>
+    </div>
+    <div class="section" data-anchor="contact">
+      <section class="content">Contact</section>
+    </div>
+  </div>
+  <body>
+    <!-- Script Imports -->
+    <script src="./scripts/pokemon.js"></script>
+    <script src="./scripts/scrolloverflow.min.js"></script>
+    <script src="./scripts/fullpage.min.js"></script>
+    <script>
+      new fullpage("#fullpage", {
+        licenseKey: "?zfUlDT!p1",
+        menu: "#nav-links",
+        anchors: [
+          "landing",
+          "pokemon",
+          "work",
+          "skills",
+          "projects",
+          "contact",
+        ],
+      });
+    </script>
+  </body>
+</html>
